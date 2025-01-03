@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+     <!-- bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- style.css -->
+        <link rel="stylesheet" href="css/profile1.css" />
+        <link rel="stylesheet" href="css/indexstyle.css" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Bootsrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Javascript-->
+    <script src="script.js"></script>
+    </head>
+  <body>
+        <!-- navigation -->
+        <div class="navbar bg-body-tertiary"></div>
+        <nav class="navbar navbar-expand-lg fixed top bg-body-tertiary">
+        <div class="container ">
+          <img src="img/maralogo.png " alt="Uitm Logo" width="60px">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="application.html">Profiles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="aboutus.html">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.uitm.edu.my/index.php/ms/">Uitm Website</a></li>
+                            <li><a class="dropdown-item" href="https://ms.wikipedia.org/wiki/Universiti_Teknologi_MARA">Uitm Wikipedia</a></li>
+                            <li><a class="dropdown-item" href="https://istudent.uitm.edu.my/index_isp.htm">IStudent Portal</a></li>
+                            <li><a class="dropdown-item" href="https://ufuture.uitm.edu.my/home/">Ufuture</a></li>
+                            <li><a class="dropdown-item" href="https://mystudent.uitm.edu.my/">Mystudent</a></li>
+                          </ul>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="login-button">Login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="form-check form-switch bg-body-tertiary">
+              <input class="form-check-input bg-body-tertiary" type="checkbox" id="darkModeToggle"/>
+              <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+              <span class="theme-icon bg-body-tertiary" id="themeIcon">🌞</span>
+            </div>
+        </div>
+        </div>
+        </nav>
+
+<!-- Bahagian Profile-->
+    <div class="profile-section bg-body-tertiary">
+        <div class="profile-image">
+            <img src="img/random1.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-content bg-body-tertiary">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Semester:</strong> 5</p>
+            <p><strong>Faculty:</strong> Information Science Management</p>
+            <p><strong>Project:</strong> Small Robotics</p>
+            <p></p>
+            
+            <h3>Project Progress</h3>
+            <div class="progress-bar bg-body-tertiary">
+                <span>70%</span>
+            </div>
+            <a href="#" class="button">Email me</a>
+
+            <h3>Skills</h3>
+            <div class="skills bg-body-tertiary">
+                <ul>
+                  <li><i class="bi bi-patch-check-fill blue-icon"></i> Robotics Programming (C++, Python)</li>
+                  <li><i class="bi bi-patch-check-fill blue-icon"></i></i> Artificial Intelligence</li>
+                  <li><i class="bi bi-patch-check-fill blue-icon"></i></i> Machine Learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--Back Button-->
+<a href="application.html" class="button2">Back</a>
+
+ <!-- footer -->
+ <footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>About Us</h3>
+      <p>MyWebsite is a platform that provides quality content and resources for learning and growth. Stay connected with us!</p>
+    </div>
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="application.html">Profile</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 MyWebsite | Designed by You
+  </div>
+</footer>
+
+      <!--bootstrap js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--bootstrap Dropdown Menu-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--darkmode script-->
+  <script>
+        function setTheme(theme){
+          document.documentElement.setAttribute("data-bs-theme", theme);
+          localStorage.setItem("theme", theme);
+          document.getElementById("themeLabel").innerText =
+              theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+        }
+          document
+            .getElementById("darkModeToggle")
+            .addEventListener("change", function (event) {
+                if(event.target.checked) {
+                  setTheme("dark");
+                } else {
+                    setTheme("");
+                }
+            });
+
+        window.onload = function() {
+              let savedTheme = localStorage.getItem("theme");
+              if (savedTheme){
+                setTheme(savedTheme);
+                if(savedtheme==="dark") {
+                document.GetElementById("darkModeToggle").checked = true;
+              }
+              }
+        };
+
+        const toggleSwitch = document.querySelector("#darkModeToggle");
+        const themeLabel = document.querySelector("#themeLabel");
+        const themeIcon = document.querySelector("#themeIcon");
+
+        toggleSwitch.addEventListener("change", () => {
+             document.body.classList.toggle("dark-mode");
+  
+ 
+        if (toggleSwitch.checked) {
+           themeIcon.textContent = "🌙"; // Moon icon for dark mode
+           themeLabel.textContent = "Light Mode";
+        } else {
+          themeIcon.textContent = "🌞"; // Sun icon for light mode
+          themeLabel.textContent = "Dark Mode";
+        }
+        });
+
+          // Function to apply dark mode
+          function applyDarkMode() {
+            document.body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+            themeIcon.textContent = "🌙"; // Moon icon for dark mode
+            themeLabel.textContent = "Light Mode";
+          }
+          // Function to remove dark mode
+          function removeDarkMode() {
+            document.body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+            themeIcon.textContent = "🌞"; // Sun icon for light mode
+            themeLabel.textContent = "Dark Mode";
+          }
+          // Check saved mode on page load
+          const darkModeEnabled = localStorage.getItem("darkMode") === "true";
+          if (darkModeEnabled) {
+            applyDarkMode();
+          }
+          // Listen for toggle changes
+          toggleSwitch.addEventListener("change", () => {
+            if (toggleSwitch.checked) {
+              applyDarkMode();
+              localStorage.setItem("darkMode", "true"); // Save preference
+            } else {
+              removeDarkMode();
+              localStorage.setItem("darkMode", "false"); // Save preference
+            }
+          });
+    </script>
+  </body>
+</html>
